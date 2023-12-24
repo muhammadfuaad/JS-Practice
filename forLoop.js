@@ -1,5 +1,7 @@
-for (let i = 0; i < 5; i++) {
-    console.log(i);
+{
+    for (let i = 0; i < 5; i++) {
+        console.log("1st:", i);
+    }
 }
 // The for loop is widely used when the number of iterations is known or can be determined in advance. 
 // It consists of three parts:
@@ -15,7 +17,7 @@ for (let i = 0; i < 5; i++) {
 
 {let i = 0;
     do {
-        console.log(i);
+        console.log("2nd:", i);
         i++;
     } while (i < 5);
 }
@@ -27,7 +29,7 @@ for (let i = 0; i < 5; i++) {
 {
     let i = 0;
     while (i < 5) {
-        console.log(i);
+        console.log("3rd:", i);
         i++;
     }
 }
@@ -37,7 +39,7 @@ let array = [0, 1, 2, 3, 5]
 {
     let i = 0;
     while (i < array.length) {
-        console.log(array[4])
+        console.log("4th:", array[i])
         i++;
     }
 }

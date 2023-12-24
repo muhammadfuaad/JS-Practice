@@ -1,6 +1,9 @@
 let myAge = 28
-let myAgeIn2030 = 35
+let myAgeIn2030
 myAge = myAgeIn2030
+
+myAgeIn2030 = 35
+// myAgeIn2030 = 
 console.log(myAge);
 
 let myGoals = {
