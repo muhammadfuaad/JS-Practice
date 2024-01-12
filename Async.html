@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assalam-o-alaikum wrwb!</title>
+  <h1>Assalam-o-alaikum wrwb!</h1>
+
+  <h2>I would change my background color in 5 seconds.</h2>
+  <button>Don't change</button>
+</head>
+<body>
+
+<script>
+  function changeColor() {
+    document.querySelector("h2").style.backgroundColor = "red"
+  }
+  let changeColorTimeOut = setTimeout(changeColor, 5000)
+
+  function sayCompleteSalam () {
+    document.querySelector("h1").innerHTML = "Assalam-o-alaikum wrwb! How're you?"
+  }
+  setTimeout(sayCompleteSalam, 5000)
+
+  document.querySelector("button").addEventListener("click", function() {
+    clearTimeout(changeColorTimeOut)
+    document.querySelector("h2").innerText = "Okay, don't worry. I wouldn't change my color now."
+    document.querySelector("button").innerText = "Wouldn't change now."
+  })
+</script>
+
+</body>
+</html>

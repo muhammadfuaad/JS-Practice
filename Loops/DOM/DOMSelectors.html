@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selectors Practice</title>
+    <style>
+        /* Add some basic styling for better visualization */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Welcome to DOM Selectors Practice</h1>
+        <p>This is a paragraph inside a div with an id of "container".</p>
+        <ul>
+            <li class="list-item" id="first-item">Item 1</li>
+            <li class="list-item" id="second-item">Item 2</li>
+            <li class="list-item" id="third-item">Item 3</li>
+        </ul>
+    </div>
+
+    <script>
+        // Your JavaScript code for DOM selectors practice
+        // Select the h1 element and change its text content
+        document.querySelector('h1').textContent = 'DOM Selectors Practice';
+
+        // Select the paragraph inside the div with id "container" and change its color
+        document.querySelector('#container p').style.color = 'blue';
+
+        // Select all list items with class "list-item" and log their text content
+        const listItems = document.querySelectorAll('.list-item');
+        listItems.forEach(item => console.log(item.textContent));
+    </script>
+
+</body>
+</html>

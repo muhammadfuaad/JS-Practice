@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML with Script Tag</title>
+</head>
+<body>
+
+    <h1>List of users</h1>
+    <p id="iterations"></p>
+    <ul id="userList"></ul>
+
+
+    <script>
+        const requestUrl = "https://jsonplaceholder.typicode.com/users"
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET', requestUrl)
+        xhr.onreadystatechange = function() {
+          console.log(xhr.readyState)
+          if(xhr.readyState == 4) {
+            const myData = JSON.parse(this.responseText)
+            console.log("myData:", myData)
+            console.log("typeof myData:", typeof myData)
+            let users = myData
+            let listOfUsers = []
+            const userListElement = document.getElementById("userList");
+            let iterations = document.getElementById("iterations")
+            const listItem = document.createElement("li");
+            let numberOfIterations = 0
+                    for (let i = 0; i < users.length; i++) {
+                    listItem.textContent = `Name: ${users[i].name} Email: ${users[i].email} phone: ${users[i].phone}
+                    website: ${users[i].website}`;
+                    userListElement.appendChild(listItem);
+                    numberOfIterations++
+                    console.log("listItem:", listItem)
+                    console.log("numbernumberOfIterations:",numberOfIterations)
+                    }
+                    iterations.textContent = numberOfIterations
+
+           
+
+          }
+          console.log("Assalam-o-alaikum!")
+
+        }
+        console.log("here");
+        console.log(xhr);
+
+        xhr.send()
+    </script>
+
+</body>
+</html>
