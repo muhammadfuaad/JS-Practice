@@ -14,10 +14,11 @@ const userData = {
     console.log("userData's this:", this);
   }
 }
-
+console.log(userData.fullName);
 console.log("outside's this:", this);
 console.log(userData.introduceYourself());
 
 // Questions:
 // Why "outside's this" is printed at the top of all in the console?
 // Does all this have same reference?
+// Why does fullName shows an error when added a (), line#17?

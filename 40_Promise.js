@@ -8,19 +8,19 @@
 //   console.log(userOne, email);
 // })
 
-let promiseTwo = new Promise(function(resolve, reject) {
+let promise2 = new Promise(function(resolve, reject) {
   setTimeout(function(params) {
     let error = true
-    if(!error) {
-      resolve({userTwo: "Muhammad Fuaad", emailTwo: "fuaad29@gmail.com"})
+    if(error) {
+      resolve({user2: "Muhammad Fuaad", email2: "fuaad29@gmail.com"})
     } else {
       reject("ERROR: Something Went Wrong")
     }
   })
 })
 
-const extractedUserTwo = promiseTwo.then((userTwo)=> {
-  console.log(userTwo)
+const extractedUserTwo = promise2.then((user2)=> {
+  console.log(user2)
 }).catch((error)=> {
   console.log(error);
 })
