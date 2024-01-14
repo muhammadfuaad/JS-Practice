@@ -7,4 +7,4 @@ const userData = {
   }
   
 }
-console.log(userData.instroduceYourself())
+console.log(userData.introduceYourself())
