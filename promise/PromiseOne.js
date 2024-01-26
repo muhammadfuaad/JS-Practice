@@ -11,12 +11,12 @@ let promise = new Promise(function(resolve, reject) {
 
 const extractedUser = promise.then((userData)=> {
   // console.log(userData)
-  return userData.name
-}).then((name)=> {
-  console.log(name);
+  return userData
+}).then((userData)=> {
+  console.log("email:", userData.email);
 })
 .catch((error)=> {
-  console.log(error);
+  console.log("error:", error);
 })
 .finally(()=> {
   console.log("Promise either resolved or rejected");
